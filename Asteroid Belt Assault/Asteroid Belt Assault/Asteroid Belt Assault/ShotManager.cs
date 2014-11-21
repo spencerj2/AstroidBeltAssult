@@ -47,7 +47,7 @@ namespace Asteroid_Belt_Assault
 
             thisShot.Velocity *= shotSpeed;
 
-            for (int x = 1; x < FrameCount; x++)
+            for (int x = 10; x < FrameCount; x++)
             {
                 thisShot.AddFrame(new Rectangle(
                     InitialFrame.X + (InitialFrame.Width * x),

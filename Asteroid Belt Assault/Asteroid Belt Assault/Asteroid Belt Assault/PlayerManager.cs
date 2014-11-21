@@ -72,31 +72,15 @@ namespace Asteroid_Belt_Assault
                     new Vector2(0, -1),
                     true);
                 shotTimer = 0.0f;
+
+
             }
         }
 
+       
+
         private void HandleKeyboardInput(KeyboardState keyState)
         {
-            if (keyState.IsKeyDown(Keys.Up))
-            {
-                playerSprite.Velocity += new Vector2(0, -1);
-            }
-
-            if (keyState.IsKeyDown(Keys.Down))
-            {
-                playerSprite.Velocity += new Vector2(0, 1);
-            }
-
-            if (keyState.IsKeyDown(Keys.Left))
-            {
-                playerSprite.Velocity += new Vector2(-1, 0);
-            }
-
-            if (keyState.IsKeyDown(Keys.Right))
-            {
-                playerSprite.Velocity += new Vector2(1, 0);
-            }
-
             if (keyState.IsKeyDown(Keys.Space))
             {
                 FireShot();
@@ -141,6 +125,9 @@ namespace Asteroid_Belt_Assault
 
         public void Update(GameTime gameTime)
         {
+            MouseState ms = Mouse.GetState();
+            playerSprite.Location = new Vector2(ms.X, ms.Y);
+
             PlayerShotManager.Update(gameTime);
 
             if (!Destroyed)
@@ -149,7 +136,7 @@ namespace Asteroid_Belt_Assault
 
                 shotTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                HandleKeyboardInput(Keyboard.GetState());
+                //HandleKeyboardInput(Keyboard.GetState());
                 HandleGamepadInput(GamePad.GetState(PlayerIndex.One));
 
                 playerSprite.Velocity.Normalize();
