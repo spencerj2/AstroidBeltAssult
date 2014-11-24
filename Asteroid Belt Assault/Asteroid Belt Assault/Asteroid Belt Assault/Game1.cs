@@ -23,6 +23,7 @@ namespace Asteroid_Belt_Assault
         GameStates gameState = GameStates.Playing;
         Texture2D titleScreen;
         Texture2D spriteSheet;
+        Sprite crosshair;
 
         StarField starField;
         AsteroidManager asteroidManager;
@@ -96,6 +97,11 @@ namespace Asteroid_Belt_Assault
                     0,
                     this.Window.ClientBounds.Width,
                     this.Window.ClientBounds.Height));
+
+            crosshair = new Sprite(new Vector2(850, 450), // Start at x=-150, y=30
+                                  spriteSheet,
+                                  new Rectangle(0, 198, 163, 185), // Use this part of the superdog texture
+                                  new Vector2(-60, -20));
 
             // TODO: use this.Content to load your game content here
         }

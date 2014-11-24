@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EAHSCS\Documents\GitHub\AstroidBeltAssult\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Textures\SpriteSheet.xnb</Output>
-      <Time>2014-11-21T07:27:14.8016-05:00</Time>
+      <Time>2014-11-24T07:28:14.291-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\TitleScreen.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EAHSCS\Documents\GitHub\AstroidBeltAssult\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
-      <Time>2014-11-21T07:27:14.8096-05:00</Time>
+      <Time>2014-11-24T07:28:14.305-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
