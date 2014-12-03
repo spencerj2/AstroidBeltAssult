@@ -24,7 +24,6 @@ namespace Asteroid_Belt_Assault
         Texture2D titleScreen;
         Texture2D spriteSheet;
 
-        Crosshair Crosshair;
         StarField starField;
         AsteroidManager asteroidManager;
         PlayerManager playerManager;
@@ -99,16 +98,6 @@ namespace Asteroid_Belt_Assault
                     this.Window.ClientBounds.Width,
                     this.Window.ClientBounds.Height));
 
-            Crosshair = new Crosshair(
-                spriteSheet,
-                new Rectangle(0, 200, 50, 50),
-                6,
-                Crosshair,
-                new Rectangle(
-                    0,
-                    0,
-                    this.Window.ClientBounds.Width,
-                    this.Window.ClientBounds.Height));
 
             // TODO: use this.Content to load your game content here
         }
@@ -171,7 +160,7 @@ namespace Asteroid_Belt_Assault
         {
 
 
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.Blue);
 
             // TODO: Add your drawing code here
      
