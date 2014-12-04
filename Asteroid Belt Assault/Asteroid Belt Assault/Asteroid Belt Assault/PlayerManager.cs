@@ -81,7 +81,8 @@ namespace Asteroid_Belt_Assault
 
         private void HandleKeyboardInput(KeyboardState keyState)
         {
-            if (keyState.IsKeyDown(Keys.Space))
+            MouseState ms = Mouse.GetState();
+            if (ms.LeftButton == ButtonState.Pressed)
             {
                 FireShot();
             }
@@ -136,7 +137,7 @@ namespace Asteroid_Belt_Assault
 
                 shotTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                //HandleKeyboardInput(Keyboard.GetState());
+                HandleKeyboardInput(Keyboard.GetState());
                 HandleGamepadInput(GamePad.GetState(PlayerIndex.One));
 
                 playerSprite.Velocity.Normalize();

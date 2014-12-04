@@ -160,7 +160,7 @@ namespace Asteroid_Belt_Assault
         {
 
 
-            GraphicsDevice.Clear(Color.Blue);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
      
