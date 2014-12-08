@@ -19,6 +19,8 @@ namespace Asteroid_Belt_Assault
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Song catmix;
+        bool songstart = false;
         enum GameStates { TitleScreen, Playing, PlayerDead, GameOver };
         GameStates gameState = GameStates.Playing;
         Texture2D titleScreen;
@@ -60,6 +62,8 @@ namespace Asteroid_Belt_Assault
 
             titleScreen = Content.Load<Texture2D>(@"Textures\TitleScreen");
             spriteSheet = Content.Load<Texture2D>(@"Textures\spriteSheet");
+            catmix = Content.Load<Song>(@"Music\catmix");
+            MediaPlayer.IsRepeating = true; 
 
             starField = new StarField(
                 this.Window.ClientBounds.Width,
@@ -118,12 +122,18 @@ namespace Asteroid_Belt_Assault
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            if (!songstart)
+            {
+                MediaPlayer.Play(catmix);
+                songstart = true;
+            }  
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             // TODO: Add your update logic here
             MouseState ms = Mouse.GetState();
+            KeyboardState ks = Keyboard.GetState();
 
             if (ms.RightButton == ButtonState.Pressed)
             {
